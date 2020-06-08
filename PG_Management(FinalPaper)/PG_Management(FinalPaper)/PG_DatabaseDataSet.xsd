@@ -272,7 +272,7 @@ SELECT Collector_ID, FullName, Location, Email, Phone FROM Collector_TB WHERE (C
               </DbSource>
               <DbSource ConnectionRef="PG_DatabaseConnectionString (MySettings)" DbObjectName="PG_Database.dbo.Collector_TB" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy_ID" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy_ID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy_ID">
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT Collector_ID, FullName, Location, Email, Phone FROM dbo.Collector_TB
 WHERE Collector_ID =@Collector_ID</CommandText>
                     <Parameters>
@@ -291,7 +291,7 @@ WHERE Collector_ID =@Collector_ID</CommandText>
   <xs:element name="PG_DatabaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="PG_DatabaseDataSet" msprop:Generator_UserDSName="PG_DatabaseDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Art_TB" msprop:Generator_TableClassName="Art_TBDataTable" msprop:Generator_TableVarName="tableArt_TB" msprop:Generator_RowChangedName="Art_TBRowChanged" msprop:Generator_TablePropName="Art_TB" msprop:Generator_RowDeletingName="Art_TBRowDeleting" msprop:Generator_RowChangingName="Art_TBRowChanging" msprop:Generator_RowEvHandlerName="Art_TBRowChangeEventHandler" msprop:Generator_RowDeletedName="Art_TBRowDeleted" msprop:Generator_RowClassName="Art_TBRow" msprop:Generator_UserTableName="Art_TB" msprop:Generator_RowEvArgName="Art_TBRowChangeEvent">
+        <xs:element name="Art_TB" msprop:Generator_TableClassName="Art_TBDataTable" msprop:Generator_TableVarName="tableArt_TB" msprop:Generator_TablePropName="Art_TB" msprop:Generator_RowDeletingName="Art_TBRowDeleting" msprop:Generator_RowChangingName="Art_TBRowChanging" msprop:Generator_RowEvHandlerName="Art_TBRowChangeEventHandler" msprop:Generator_RowDeletedName="Art_TBRowDeleted" msprop:Generator_UserTableName="Art_TB" msprop:Generator_RowChangedName="Art_TBRowChanged" msprop:Generator_RowEvArgName="Art_TBRowChangeEvent" msprop:Generator_RowClassName="Art_TBRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Art_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnArt_ID" msprop:Generator_ColumnPropNameInRow="Art_ID" msprop:Generator_ColumnPropNameInTable="Art_IDColumn" msprop:Generator_UserColumnName="Art_ID" type="xs:int" />
@@ -317,7 +317,7 @@ WHERE Collector_ID =@Collector_ID</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Artist_TB" msprop:Generator_TableClassName="Artist_TBDataTable" msprop:Generator_TableVarName="tableArtist_TB" msprop:Generator_RowChangedName="Artist_TBRowChanged" msprop:Generator_TablePropName="Artist_TB" msprop:Generator_RowDeletingName="Artist_TBRowDeleting" msprop:Generator_RowChangingName="Artist_TBRowChanging" msprop:Generator_RowEvHandlerName="Artist_TBRowChangeEventHandler" msprop:Generator_RowDeletedName="Artist_TBRowDeleted" msprop:Generator_RowClassName="Artist_TBRow" msprop:Generator_UserTableName="Artist_TB" msprop:Generator_RowEvArgName="Artist_TBRowChangeEvent">
+        <xs:element name="Artist_TB" msprop:Generator_TableClassName="Artist_TBDataTable" msprop:Generator_TableVarName="tableArtist_TB" msprop:Generator_TablePropName="Artist_TB" msprop:Generator_RowDeletingName="Artist_TBRowDeleting" msprop:Generator_RowChangingName="Artist_TBRowChanging" msprop:Generator_RowEvHandlerName="Artist_TBRowChangeEventHandler" msprop:Generator_RowDeletedName="Artist_TBRowDeleted" msprop:Generator_UserTableName="Artist_TB" msprop:Generator_RowChangedName="Artist_TBRowChanged" msprop:Generator_RowEvArgName="Artist_TBRowChangeEvent" msprop:Generator_RowClassName="Artist_TBRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Artist_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnArtist_ID" msprop:Generator_ColumnPropNameInRow="Artist_ID" msprop:Generator_ColumnPropNameInTable="Artist_IDColumn" msprop:Generator_UserColumnName="Artist_ID" type="xs:int" />
@@ -359,7 +359,7 @@ WHERE Collector_ID =@Collector_ID</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Collector_TB" msprop:Generator_TableClassName="Collector_TBDataTable" msprop:Generator_TableVarName="tableCollector_TB" msprop:Generator_RowChangedName="Collector_TBRowChanged" msprop:Generator_TablePropName="Collector_TB" msprop:Generator_RowDeletingName="Collector_TBRowDeleting" msprop:Generator_RowChangingName="Collector_TBRowChanging" msprop:Generator_RowEvHandlerName="Collector_TBRowChangeEventHandler" msprop:Generator_RowDeletedName="Collector_TBRowDeleted" msprop:Generator_RowClassName="Collector_TBRow" msprop:Generator_UserTableName="Collector_TB" msprop:Generator_RowEvArgName="Collector_TBRowChangeEvent">
+        <xs:element name="Collector_TB" msprop:Generator_TableClassName="Collector_TBDataTable" msprop:Generator_TableVarName="tableCollector_TB" msprop:Generator_TablePropName="Collector_TB" msprop:Generator_RowDeletingName="Collector_TBRowDeleting" msprop:Generator_RowChangingName="Collector_TBRowChanging" msprop:Generator_RowEvHandlerName="Collector_TBRowChangeEventHandler" msprop:Generator_RowDeletedName="Collector_TBRowDeleted" msprop:Generator_UserTableName="Collector_TB" msprop:Generator_RowChangedName="Collector_TBRowChanged" msprop:Generator_RowEvArgName="Collector_TBRowChangeEvent" msprop:Generator_RowClassName="Collector_TBRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Collector_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCollector_ID" msprop:Generator_ColumnPropNameInRow="Collector_ID" msprop:Generator_ColumnPropNameInTable="Collector_IDColumn" msprop:Generator_UserColumnName="Collector_ID" type="xs:int" />
@@ -411,8 +411,8 @@ WHERE Collector_ID =@Collector_ID</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="Art_TB_Artist_TB" msdata:parent="Art_TB" msdata:child="Artist_TB" msdata:parentkey="Art_ID" msdata:childkey="Artist_ID" msprop:Generator_UserChildTable="Artist_TB" msprop:Generator_ChildPropName="GetArtist_TBRows" msprop:Generator_UserRelationName="Art_TB_Artist_TB" msprop:Generator_ParentPropName="Art_TBRow" msprop:Generator_RelationVarName="relationArt_TB_Artist_TB" msprop:Generator_UserParentTable="Art_TB" />
-      <msdata:Relationship name="Art_TB_Collector_TB" msdata:parent="Art_TB" msdata:child="Collector_TB" msdata:parentkey="Art_ID" msdata:childkey="Collector_ID" msprop:Generator_UserChildTable="Collector_TB" msprop:Generator_ChildPropName="GetCollector_TBRows" msprop:Generator_UserRelationName="Art_TB_Collector_TB" msprop:Generator_ParentPropName="Art_TBRow" msprop:Generator_RelationVarName="relationArt_TB_Collector_TB" msprop:Generator_UserParentTable="Art_TB" />
+      <msdata:Relationship name="Art_TB_Artist_TB" msdata:parent="Art_TB" msdata:child="Artist_TB" msdata:parentkey="Art_ID" msdata:childkey="Artist_ID" msprop:Generator_UserChildTable="Artist_TB" msprop:Generator_ChildPropName="GetArtist_TBRows" msprop:Generator_UserRelationName="Art_TB_Artist_TB" msprop:Generator_RelationVarName="relationArt_TB_Artist_TB" msprop:Generator_UserParentTable="Art_TB" msprop:Generator_ParentPropName="Art_TBRow" />
+      <msdata:Relationship name="Art_TB_Collector_TB" msdata:parent="Art_TB" msdata:child="Collector_TB" msdata:parentkey="Art_ID" msdata:childkey="Collector_ID" msprop:Generator_UserChildTable="Collector_TB" msprop:Generator_ChildPropName="GetCollector_TBRows" msprop:Generator_UserRelationName="Art_TB_Collector_TB" msprop:Generator_RelationVarName="relationArt_TB_Collector_TB" msprop:Generator_UserParentTable="Art_TB" msprop:Generator_ParentPropName="Art_TBRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

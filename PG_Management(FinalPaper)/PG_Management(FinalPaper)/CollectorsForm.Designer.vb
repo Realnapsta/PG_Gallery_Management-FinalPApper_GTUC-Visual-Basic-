@@ -23,26 +23,34 @@ Partial Class CollectorsForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CollectorsForm))
         Dim Collector_IDLabel As System.Windows.Forms.Label
         Dim FullNameLabel As System.Windows.Forms.Label
         Dim LocationLabel As System.Windows.Forms.Label
         Dim EmailLabel As System.Windows.Forms.Label
         Dim PhoneLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CollectorsForm))
         Me.Collector_TBBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.Collector_TBBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PG_DatabaseDataSet = New PG_Management_FinalPaper_.PG_DatabaseDataSet()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.Collector_TBBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.Collector_TBDataGridView = New System.Windows.Forms.DataGridView()
+        Me.ViewCollector = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Collector_IDTextBox = New System.Windows.Forms.TextBox()
         Me.FullNameTextBox = New System.Windows.Forms.TextBox()
         Me.LocationTextBox = New System.Windows.Forms.TextBox()
@@ -51,18 +59,10 @@ Partial Class CollectorsForm
         Me.Add_Collector = New System.Windows.Forms.Button()
         Me.Update_Collector = New System.Windows.Forms.Button()
         Me.Delete_Collector = New System.Windows.Forms.Button()
-        Me.ViewCollector = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.FillBy_IDToolStrip = New System.Windows.Forms.ToolStrip()
         Me.Collector_IDToolStripLabel = New System.Windows.Forms.ToolStripLabel()
         Me.Collector_IDToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
         Me.FillBy_IDToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.Collector_TBBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PG_DatabaseDataSet = New PG_Management_FinalPaper_.PG_DatabaseDataSet()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Collector_TBTableAdapter = New PG_Management_FinalPaper_.PG_DatabaseDataSetTableAdapters.Collector_TBTableAdapter()
         Me.TableAdapterManager = New PG_Management_FinalPaper_.PG_DatabaseDataSetTableAdapters.TableAdapterManager()
         Collector_IDLabel = New System.Windows.Forms.Label()
@@ -72,11 +72,56 @@ Partial Class CollectorsForm
         PhoneLabel = New System.Windows.Forms.Label()
         CType(Me.Collector_TBBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Collector_TBBindingNavigator.SuspendLayout()
-        CType(Me.Collector_TBDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.FillBy_IDToolStrip.SuspendLayout()
         CType(Me.Collector_TBBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PG_DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Collector_TBDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.FillBy_IDToolStrip.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'Collector_IDLabel
+        '
+        Collector_IDLabel.AutoSize = True
+        Collector_IDLabel.Location = New System.Drawing.Point(19, 413)
+        Collector_IDLabel.Name = "Collector_IDLabel"
+        Collector_IDLabel.Size = New System.Drawing.Size(65, 13)
+        Collector_IDLabel.TabIndex = 2
+        Collector_IDLabel.Text = "Collector ID:"
+        '
+        'FullNameLabel
+        '
+        FullNameLabel.AutoSize = True
+        FullNameLabel.Location = New System.Drawing.Point(19, 439)
+        FullNameLabel.Name = "FullNameLabel"
+        FullNameLabel.Size = New System.Drawing.Size(57, 13)
+        FullNameLabel.TabIndex = 4
+        FullNameLabel.Text = "Full Name:"
+        '
+        'LocationLabel
+        '
+        LocationLabel.AutoSize = True
+        LocationLabel.Location = New System.Drawing.Point(19, 465)
+        LocationLabel.Name = "LocationLabel"
+        LocationLabel.Size = New System.Drawing.Size(51, 13)
+        LocationLabel.TabIndex = 6
+        LocationLabel.Text = "Location:"
+        '
+        'EmailLabel
+        '
+        EmailLabel.AutoSize = True
+        EmailLabel.Location = New System.Drawing.Point(19, 491)
+        EmailLabel.Name = "EmailLabel"
+        EmailLabel.Size = New System.Drawing.Size(35, 13)
+        EmailLabel.TabIndex = 8
+        EmailLabel.Text = "Email:"
+        '
+        'PhoneLabel
+        '
+        PhoneLabel.AutoSize = True
+        PhoneLabel.Location = New System.Drawing.Point(19, 517)
+        PhoneLabel.Name = "PhoneLabel"
+        PhoneLabel.Size = New System.Drawing.Size(41, 13)
+        PhoneLabel.TabIndex = 10
+        PhoneLabel.Text = "Phone:"
         '
         'Collector_TBBindingNavigator
         '
@@ -92,9 +137,44 @@ Partial Class CollectorsForm
         Me.Collector_TBBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.Collector_TBBindingNavigator.Name = "Collector_TBBindingNavigator"
         Me.Collector_TBBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.Collector_TBBindingNavigator.Size = New System.Drawing.Size(871, 25)
+        Me.Collector_TBBindingNavigator.Size = New System.Drawing.Size(673, 25)
         Me.Collector_TBBindingNavigator.TabIndex = 0
         Me.Collector_TBBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'Collector_TBBindingSource
+        '
+        Me.Collector_TBBindingSource.DataMember = "Collector_TB"
+        Me.Collector_TBBindingSource.DataSource = Me.PG_DatabaseDataSet
+        '
+        'PG_DatabaseDataSet
+        '
+        Me.PG_DatabaseDataSet.DataSetName = "PG_DatabaseDataSet"
+        Me.PG_DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -129,16 +209,9 @@ Partial Class CollectorsForm
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
         Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
@@ -161,26 +234,8 @@ Partial Class CollectorsForm
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'Collector_TBBindingNavigatorSaveItem
         '
@@ -198,17 +253,46 @@ Partial Class CollectorsForm
         Me.Collector_TBDataGridView.DataSource = Me.Collector_TBBindingSource
         Me.Collector_TBDataGridView.Location = New System.Drawing.Point(12, 81)
         Me.Collector_TBDataGridView.Name = "Collector_TBDataGridView"
-        Me.Collector_TBDataGridView.Size = New System.Drawing.Size(806, 313)
+        Me.Collector_TBDataGridView.Size = New System.Drawing.Size(650, 313)
         Me.Collector_TBDataGridView.TabIndex = 1
         '
-        'Collector_IDLabel
+        'ViewCollector
         '
-        Collector_IDLabel.AutoSize = True
-        Collector_IDLabel.Location = New System.Drawing.Point(19, 413)
-        Collector_IDLabel.Name = "Collector_IDLabel"
-        Collector_IDLabel.Size = New System.Drawing.Size(65, 13)
-        Collector_IDLabel.TabIndex = 2
-        Collector_IDLabel.Text = "Collector ID:"
+        Me.ViewCollector.HeaderText = "View Collector"
+        Me.ViewCollector.Name = "ViewCollector"
+        Me.ViewCollector.Text = "View Collector"
+        Me.ViewCollector.UseColumnTextForButtonValue = True
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Collector_ID"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Collector_ID"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "FullName"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "FullName"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Location"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Location"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Email"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Email"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Phone"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Phone"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         '
         'Collector_IDTextBox
         '
@@ -218,15 +302,6 @@ Partial Class CollectorsForm
         Me.Collector_IDTextBox.Size = New System.Drawing.Size(239, 20)
         Me.Collector_IDTextBox.TabIndex = 3
         '
-        'FullNameLabel
-        '
-        FullNameLabel.AutoSize = True
-        FullNameLabel.Location = New System.Drawing.Point(19, 439)
-        FullNameLabel.Name = "FullNameLabel"
-        FullNameLabel.Size = New System.Drawing.Size(57, 13)
-        FullNameLabel.TabIndex = 4
-        FullNameLabel.Text = "Full Name:"
-        '
         'FullNameTextBox
         '
         Me.FullNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Collector_TBBindingSource, "FullName", True))
@@ -234,15 +309,6 @@ Partial Class CollectorsForm
         Me.FullNameTextBox.Name = "FullNameTextBox"
         Me.FullNameTextBox.Size = New System.Drawing.Size(239, 20)
         Me.FullNameTextBox.TabIndex = 5
-        '
-        'LocationLabel
-        '
-        LocationLabel.AutoSize = True
-        LocationLabel.Location = New System.Drawing.Point(19, 465)
-        LocationLabel.Name = "LocationLabel"
-        LocationLabel.Size = New System.Drawing.Size(51, 13)
-        LocationLabel.TabIndex = 6
-        LocationLabel.Text = "Location:"
         '
         'LocationTextBox
         '
@@ -252,15 +318,6 @@ Partial Class CollectorsForm
         Me.LocationTextBox.Size = New System.Drawing.Size(239, 20)
         Me.LocationTextBox.TabIndex = 7
         '
-        'EmailLabel
-        '
-        EmailLabel.AutoSize = True
-        EmailLabel.Location = New System.Drawing.Point(19, 491)
-        EmailLabel.Name = "EmailLabel"
-        EmailLabel.Size = New System.Drawing.Size(35, 13)
-        EmailLabel.TabIndex = 8
-        EmailLabel.Text = "Email:"
-        '
         'EmailTextBox
         '
         Me.EmailTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Collector_TBBindingSource, "Email", True))
@@ -268,15 +325,6 @@ Partial Class CollectorsForm
         Me.EmailTextBox.Name = "EmailTextBox"
         Me.EmailTextBox.Size = New System.Drawing.Size(239, 20)
         Me.EmailTextBox.TabIndex = 9
-        '
-        'PhoneLabel
-        '
-        PhoneLabel.AutoSize = True
-        PhoneLabel.Location = New System.Drawing.Point(19, 517)
-        PhoneLabel.Name = "PhoneLabel"
-        PhoneLabel.Size = New System.Drawing.Size(41, 13)
-        PhoneLabel.TabIndex = 10
-        PhoneLabel.Text = "Phone:"
         '
         'PhoneTextBox
         '
@@ -313,19 +361,12 @@ Partial Class CollectorsForm
         Me.Delete_Collector.Text = "Delete"
         Me.Delete_Collector.UseVisualStyleBackColor = True
         '
-        'ViewCollector
-        '
-        Me.ViewCollector.HeaderText = "View Collector"
-        Me.ViewCollector.Name = "ViewCollector"
-        Me.ViewCollector.Text = "View Collector"
-        Me.ViewCollector.UseColumnTextForButtonValue = True
-        '
         'FillBy_IDToolStrip
         '
         Me.FillBy_IDToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Collector_IDToolStripLabel, Me.Collector_IDToolStripTextBox, Me.FillBy_IDToolStripButton})
         Me.FillBy_IDToolStrip.Location = New System.Drawing.Point(0, 25)
         Me.FillBy_IDToolStrip.Name = "FillBy_IDToolStrip"
-        Me.FillBy_IDToolStrip.Size = New System.Drawing.Size(871, 25)
+        Me.FillBy_IDToolStrip.Size = New System.Drawing.Size(673, 25)
         Me.FillBy_IDToolStrip.TabIndex = 13
         Me.FillBy_IDToolStrip.Text = "FillBy_IDToolStrip"
         '
@@ -348,47 +389,6 @@ Partial Class CollectorsForm
         Me.FillBy_IDToolStripButton.Size = New System.Drawing.Size(46, 22)
         Me.FillBy_IDToolStripButton.Text = "Search"
         '
-        'Collector_TBBindingSource
-        '
-        Me.Collector_TBBindingSource.DataMember = "Collector_TB"
-        Me.Collector_TBBindingSource.DataSource = Me.PG_DatabaseDataSet
-        '
-        'PG_DatabaseDataSet
-        '
-        Me.PG_DatabaseDataSet.DataSetName = "PG_DatabaseDataSet"
-        Me.PG_DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Collector_ID"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Collector_ID"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "FullName"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "FullName"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Location"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Location"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Email"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Email"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Phone"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Phone"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        '
         'Collector_TBTableAdapter
         '
         Me.Collector_TBTableAdapter.ClearBeforeFill = True
@@ -405,7 +405,7 @@ Partial Class CollectorsForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(871, 569)
+        Me.ClientSize = New System.Drawing.Size(673, 569)
         Me.Controls.Add(Me.FillBy_IDToolStrip)
         Me.Controls.Add(Me.Delete_Collector)
         Me.Controls.Add(Me.Update_Collector)
@@ -427,11 +427,11 @@ Partial Class CollectorsForm
         CType(Me.Collector_TBBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Collector_TBBindingNavigator.ResumeLayout(False)
         Me.Collector_TBBindingNavigator.PerformLayout()
+        CType(Me.Collector_TBBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PG_DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Collector_TBDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.FillBy_IDToolStrip.ResumeLayout(False)
         Me.FillBy_IDToolStrip.PerformLayout()
-        CType(Me.Collector_TBBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PG_DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

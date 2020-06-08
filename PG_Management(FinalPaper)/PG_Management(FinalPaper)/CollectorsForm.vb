@@ -111,6 +111,22 @@ Public Class CollectorsForm
         End Try
 
     End Sub
+
+    Private Sub Collector_TBDataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Collector_TBDataGridView.CellContentClick
+        'If e.ColumnIndex = 5 Then
+        ' View Call button clicked
+        ' Get the ID of the selected Message
+        Dim i As Integer = e.RowIndex
+        Dim row As DataGridViewRow =
+            Collector_TBDataGridView.Rows(i)
+        Dim cell As DataGridViewCell = row.Cells(1)
+        Dim Call_ID As String = cell.Value
+        ' Display the newForm7 form
+        Dim CollectorDetails As New CollectorDetails
+        CollectorDetails.Tag = Call_ID
+        CollectorDetails.ShowDialog()
+        'End If
+    End Sub
     'End of Answer to Question 2c (Go to CollectorsDetails.vb File for remaining answer)
 
 End Class

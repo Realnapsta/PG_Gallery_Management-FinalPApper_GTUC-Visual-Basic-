@@ -73,10 +73,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArtistsDetails.Designer.vb">
-      <DependentUpon>ArtistsDetails.vb</DependentUpon>
+    <Compile Include="ArtistDetails.Designer.vb">
+      <DependentUpon>ArtistDetails.vb</DependentUpon>
     </Compile>
-    <Compile Include="ArtistsDetails.vb">
+    <Compile Include="ArtistDetails.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ArtistsForms.Designer.vb">
@@ -128,8 +128,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ArtistsDetails.resx">
-      <DependentUpon>ArtistsDetails.vb</DependentUpon>
+    <EmbeddedResource Include="ArtistDetails.resx">
+      <DependentUpon>ArtistDetails.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ArtistsForms.resx">
       <DependentUpon>ArtistsForms.vb</DependentUpon>

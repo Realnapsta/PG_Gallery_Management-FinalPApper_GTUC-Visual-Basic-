@@ -69,6 +69,8 @@ Partial Class Form1
         Me.Add_Collector = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.Add_Art = New System.Windows.Forms.Button()
+        Me.ViewALLArtists = New System.Windows.Forms.Button()
+        Me.ViewAllCollectors = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -503,11 +505,31 @@ Partial Class Form1
         Me.Add_Art.Text = "Add"
         Me.Add_Art.UseVisualStyleBackColor = True
         '
+        'ViewALLArtists
+        '
+        Me.ViewALLArtists.Location = New System.Drawing.Point(12, 294)
+        Me.ViewALLArtists.Name = "ViewALLArtists"
+        Me.ViewALLArtists.Size = New System.Drawing.Size(129, 23)
+        Me.ViewALLArtists.TabIndex = 7
+        Me.ViewALLArtists.Text = "View All Artists"
+        Me.ViewALLArtists.UseVisualStyleBackColor = True
+        '
+        'ViewAllCollectors
+        '
+        Me.ViewAllCollectors.Location = New System.Drawing.Point(285, 294)
+        Me.ViewAllCollectors.Name = "ViewAllCollectors"
+        Me.ViewAllCollectors.Size = New System.Drawing.Size(146, 23)
+        Me.ViewAllCollectors.TabIndex = 7
+        Me.ViewAllCollectors.Text = "View All Collectors"
+        Me.ViewAllCollectors.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(923, 540)
+        Me.Controls.Add(Me.ViewAllCollectors)
+        Me.Controls.Add(Me.ViewALLArtists)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
@@ -573,4 +595,6 @@ Partial Class Form1
     Friend WithEvents Add_Collector As Button
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents Add_Art As Button
+    Friend WithEvents ViewALLArtists As Button
+    Friend WithEvents ViewAllCollectors As Button
 End Class

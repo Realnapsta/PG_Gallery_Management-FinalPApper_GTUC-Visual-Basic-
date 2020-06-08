@@ -101,4 +101,14 @@ Public Class Form1
             MessageBox.Show(EXP.ToString)
         End Try
     End Sub
+
+    Private Sub ViewALLArtists_Click(sender As Object, e As EventArgs) Handles ViewALLArtists.Click
+        Me.Hide()
+        ArtistsForms.Show()
+    End Sub
+
+    Private Sub ViewAllCollectors_Click(sender As Object, e As EventArgs) Handles ViewAllCollectors.Click
+        Me.Hide()
+        CollectorsForm.Show()
+    End Sub
 End Class

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ArtistsDetails
+Partial Class ArtistDetails
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class ArtistsDetails
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ArtistsDetails))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ArtistDetails))
         Dim Artist_IDLabel As System.Windows.Forms.Label
         Dim FullNameLabel As System.Windows.Forms.Label
         Dim GenderLabel As System.Windows.Forms.Label
@@ -101,7 +101,7 @@ Partial Class ArtistsDetails
         Me.Artist_TBBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.Artist_TBBindingNavigator.Name = "Artist_TBBindingNavigator"
         Me.Artist_TBBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.Artist_TBBindingNavigator.Size = New System.Drawing.Size(448, 25)
+        Me.Artist_TBBindingNavigator.Size = New System.Drawing.Size(428, 25)
         Me.Artist_TBBindingNavigator.TabIndex = 0
         Me.Artist_TBBindingNavigator.Text = "BindingNavigator1"
         '
@@ -201,7 +201,7 @@ Partial Class ArtistsDetails
         'Artist_IDLabel
         '
         Artist_IDLabel.AutoSize = True
-        Artist_IDLabel.Location = New System.Drawing.Point(20, 89)
+        Artist_IDLabel.Location = New System.Drawing.Point(26, 67)
         Artist_IDLabel.Name = "Artist_IDLabel"
         Artist_IDLabel.Size = New System.Drawing.Size(47, 13)
         Artist_IDLabel.TabIndex = 1
@@ -210,15 +210,15 @@ Partial Class ArtistsDetails
         'Artist_IDTextBox
         '
         Me.Artist_IDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Artist_TBBindingSource, "Artist_ID", True))
-        Me.Artist_IDTextBox.Location = New System.Drawing.Point(107, 86)
+        Me.Artist_IDTextBox.Location = New System.Drawing.Point(113, 64)
         Me.Artist_IDTextBox.Name = "Artist_IDTextBox"
-        Me.Artist_IDTextBox.Size = New System.Drawing.Size(295, 20)
+        Me.Artist_IDTextBox.Size = New System.Drawing.Size(261, 20)
         Me.Artist_IDTextBox.TabIndex = 2
         '
         'FullNameLabel
         '
         FullNameLabel.AutoSize = True
-        FullNameLabel.Location = New System.Drawing.Point(20, 115)
+        FullNameLabel.Location = New System.Drawing.Point(26, 93)
         FullNameLabel.Name = "FullNameLabel"
         FullNameLabel.Size = New System.Drawing.Size(57, 13)
         FullNameLabel.TabIndex = 3
@@ -227,15 +227,15 @@ Partial Class ArtistsDetails
         'FullNameTextBox
         '
         Me.FullNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Artist_TBBindingSource, "FullName", True))
-        Me.FullNameTextBox.Location = New System.Drawing.Point(107, 112)
+        Me.FullNameTextBox.Location = New System.Drawing.Point(113, 90)
         Me.FullNameTextBox.Name = "FullNameTextBox"
-        Me.FullNameTextBox.Size = New System.Drawing.Size(295, 20)
+        Me.FullNameTextBox.Size = New System.Drawing.Size(261, 20)
         Me.FullNameTextBox.TabIndex = 4
         '
         'GenderLabel
         '
         GenderLabel.AutoSize = True
-        GenderLabel.Location = New System.Drawing.Point(20, 141)
+        GenderLabel.Location = New System.Drawing.Point(26, 119)
         GenderLabel.Name = "GenderLabel"
         GenderLabel.Size = New System.Drawing.Size(45, 13)
         GenderLabel.TabIndex = 5
@@ -244,15 +244,15 @@ Partial Class ArtistsDetails
         'GenderTextBox
         '
         Me.GenderTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Artist_TBBindingSource, "Gender", True))
-        Me.GenderTextBox.Location = New System.Drawing.Point(107, 138)
+        Me.GenderTextBox.Location = New System.Drawing.Point(113, 116)
         Me.GenderTextBox.Name = "GenderTextBox"
-        Me.GenderTextBox.Size = New System.Drawing.Size(295, 20)
+        Me.GenderTextBox.Size = New System.Drawing.Size(261, 20)
         Me.GenderTextBox.TabIndex = 6
         '
         'PhoneNumberLabel
         '
         PhoneNumberLabel.AutoSize = True
-        PhoneNumberLabel.Location = New System.Drawing.Point(20, 167)
+        PhoneNumberLabel.Location = New System.Drawing.Point(26, 145)
         PhoneNumberLabel.Name = "PhoneNumberLabel"
         PhoneNumberLabel.Size = New System.Drawing.Size(81, 13)
         PhoneNumberLabel.TabIndex = 7
@@ -261,15 +261,15 @@ Partial Class ArtistsDetails
         'PhoneNumberTextBox
         '
         Me.PhoneNumberTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Artist_TBBindingSource, "PhoneNumber", True))
-        Me.PhoneNumberTextBox.Location = New System.Drawing.Point(107, 164)
+        Me.PhoneNumberTextBox.Location = New System.Drawing.Point(113, 142)
         Me.PhoneNumberTextBox.Name = "PhoneNumberTextBox"
-        Me.PhoneNumberTextBox.Size = New System.Drawing.Size(295, 20)
+        Me.PhoneNumberTextBox.Size = New System.Drawing.Size(261, 20)
         Me.PhoneNumberTextBox.TabIndex = 8
         '
         'AddressLabel
         '
         AddressLabel.AutoSize = True
-        AddressLabel.Location = New System.Drawing.Point(20, 193)
+        AddressLabel.Location = New System.Drawing.Point(26, 171)
         AddressLabel.Name = "AddressLabel"
         AddressLabel.Size = New System.Drawing.Size(48, 13)
         AddressLabel.TabIndex = 9
@@ -278,15 +278,15 @@ Partial Class ArtistsDetails
         'AddressTextBox
         '
         Me.AddressTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Artist_TBBindingSource, "Address", True))
-        Me.AddressTextBox.Location = New System.Drawing.Point(107, 190)
+        Me.AddressTextBox.Location = New System.Drawing.Point(113, 168)
         Me.AddressTextBox.Name = "AddressTextBox"
-        Me.AddressTextBox.Size = New System.Drawing.Size(295, 20)
+        Me.AddressTextBox.Size = New System.Drawing.Size(261, 20)
         Me.AddressTextBox.TabIndex = 10
         '
         'EmailLabel
         '
         EmailLabel.AutoSize = True
-        EmailLabel.Location = New System.Drawing.Point(20, 219)
+        EmailLabel.Location = New System.Drawing.Point(26, 197)
         EmailLabel.Name = "EmailLabel"
         EmailLabel.Size = New System.Drawing.Size(35, 13)
         EmailLabel.TabIndex = 11
@@ -295,16 +295,16 @@ Partial Class ArtistsDetails
         'EmailTextBox
         '
         Me.EmailTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Artist_TBBindingSource, "Email", True))
-        Me.EmailTextBox.Location = New System.Drawing.Point(107, 216)
+        Me.EmailTextBox.Location = New System.Drawing.Point(113, 194)
         Me.EmailTextBox.Name = "EmailTextBox"
-        Me.EmailTextBox.Size = New System.Drawing.Size(295, 20)
+        Me.EmailTextBox.Size = New System.Drawing.Size(261, 20)
         Me.EmailTextBox.TabIndex = 12
         '
-        'ArtistsDetails
+        'ArtistDetails
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(448, 307)
+        Me.ClientSize = New System.Drawing.Size(428, 356)
         Me.Controls.Add(Artist_IDLabel)
         Me.Controls.Add(Me.Artist_IDTextBox)
         Me.Controls.Add(FullNameLabel)
@@ -318,8 +318,8 @@ Partial Class ArtistsDetails
         Me.Controls.Add(EmailLabel)
         Me.Controls.Add(Me.EmailTextBox)
         Me.Controls.Add(Me.Artist_TBBindingNavigator)
-        Me.Name = "ArtistsDetails"
-        Me.Text = "ArtistsDetails"
+        Me.Name = "ArtistDetails"
+        Me.Text = "ArtistDetails"
         CType(Me.PG_DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Artist_TBBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Artist_TBBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()

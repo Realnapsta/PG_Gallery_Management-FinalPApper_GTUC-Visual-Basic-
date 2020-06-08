@@ -41,7 +41,8 @@ Public Class ArtistsForms
     End Sub
 
     Private Sub ArtistsForms_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        'TODO: This line of code loads data into the 'PG_DatabaseDataSet.Collector_TB' table. You can move, or remove it, as needed.
+        Me.Artist_TBTableAdapter.Fill(Me.PG_DatabaseDataSet.Artist_TB)
     End Sub
 
 
@@ -109,6 +110,22 @@ Public Class ArtistsForms
             System.Windows.Forms.MessageBox.Show(ex.Message)
         End Try
 
+    End Sub
+
+    Private Sub Artist_TBDataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Artist_TBDataGridView.CellContentClick
+        'If e.ColumnIndex = 5 Then
+        ' View Call button clicked
+        ' Get the ID of the selected Message
+        Dim i As Integer = e.RowIndex
+        Dim row As DataGridViewRow =
+            Artist_TBDataGridView.Rows(i)
+        Dim cell As DataGridViewCell = row.Cells(1)
+        Dim Call_ID As String = cell.Value
+        ' Display the newForm7 form
+        Dim ArtistForm As New ArtistDetails
+        ArtistForm.Tag = Call_ID
+        ArtistForm.ShowDialog()
+        'End If
     End Sub
 
     'End of Answers for Question 2b in this form (Check CollectorsForm.vb form for Remaining Answers)

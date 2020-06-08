@@ -98,7 +98,7 @@ Partial Class CollectorDetails
         Me.Collector_TBBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.Collector_TBBindingNavigator.Name = "Collector_TBBindingNavigator"
         Me.Collector_TBBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.Collector_TBBindingNavigator.Size = New System.Drawing.Size(399, 25)
+        Me.Collector_TBBindingNavigator.Size = New System.Drawing.Size(438, 25)
         Me.Collector_TBBindingNavigator.TabIndex = 0
         Me.Collector_TBBindingNavigator.Text = "BindingNavigator1"
         '
@@ -198,7 +198,7 @@ Partial Class CollectorDetails
         'Collector_IDLabel
         '
         Collector_IDLabel.AutoSize = True
-        Collector_IDLabel.Location = New System.Drawing.Point(20, 88)
+        Collector_IDLabel.Location = New System.Drawing.Point(18, 60)
         Collector_IDLabel.Name = "Collector_IDLabel"
         Collector_IDLabel.Size = New System.Drawing.Size(65, 13)
         Collector_IDLabel.TabIndex = 1
@@ -207,15 +207,15 @@ Partial Class CollectorDetails
         'Collector_IDTextBox
         '
         Me.Collector_IDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Collector_TBBindingSource, "Collector_ID", True))
-        Me.Collector_IDTextBox.Location = New System.Drawing.Point(91, 85)
+        Me.Collector_IDTextBox.Location = New System.Drawing.Point(89, 57)
         Me.Collector_IDTextBox.Name = "Collector_IDTextBox"
-        Me.Collector_IDTextBox.Size = New System.Drawing.Size(257, 20)
+        Me.Collector_IDTextBox.Size = New System.Drawing.Size(306, 20)
         Me.Collector_IDTextBox.TabIndex = 2
         '
         'FullNameLabel
         '
         FullNameLabel.AutoSize = True
-        FullNameLabel.Location = New System.Drawing.Point(20, 114)
+        FullNameLabel.Location = New System.Drawing.Point(18, 86)
         FullNameLabel.Name = "FullNameLabel"
         FullNameLabel.Size = New System.Drawing.Size(57, 13)
         FullNameLabel.TabIndex = 3
@@ -224,15 +224,15 @@ Partial Class CollectorDetails
         'FullNameTextBox
         '
         Me.FullNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Collector_TBBindingSource, "FullName", True))
-        Me.FullNameTextBox.Location = New System.Drawing.Point(91, 111)
+        Me.FullNameTextBox.Location = New System.Drawing.Point(89, 83)
         Me.FullNameTextBox.Name = "FullNameTextBox"
-        Me.FullNameTextBox.Size = New System.Drawing.Size(257, 20)
+        Me.FullNameTextBox.Size = New System.Drawing.Size(306, 20)
         Me.FullNameTextBox.TabIndex = 4
         '
         'LocationLabel
         '
         LocationLabel.AutoSize = True
-        LocationLabel.Location = New System.Drawing.Point(20, 140)
+        LocationLabel.Location = New System.Drawing.Point(18, 112)
         LocationLabel.Name = "LocationLabel"
         LocationLabel.Size = New System.Drawing.Size(51, 13)
         LocationLabel.TabIndex = 5
@@ -241,15 +241,15 @@ Partial Class CollectorDetails
         'LocationTextBox
         '
         Me.LocationTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Collector_TBBindingSource, "Location", True))
-        Me.LocationTextBox.Location = New System.Drawing.Point(91, 137)
+        Me.LocationTextBox.Location = New System.Drawing.Point(89, 109)
         Me.LocationTextBox.Name = "LocationTextBox"
-        Me.LocationTextBox.Size = New System.Drawing.Size(257, 20)
+        Me.LocationTextBox.Size = New System.Drawing.Size(306, 20)
         Me.LocationTextBox.TabIndex = 6
         '
         'EmailLabel
         '
         EmailLabel.AutoSize = True
-        EmailLabel.Location = New System.Drawing.Point(20, 166)
+        EmailLabel.Location = New System.Drawing.Point(18, 138)
         EmailLabel.Name = "EmailLabel"
         EmailLabel.Size = New System.Drawing.Size(35, 13)
         EmailLabel.TabIndex = 7
@@ -258,15 +258,15 @@ Partial Class CollectorDetails
         'EmailTextBox
         '
         Me.EmailTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Collector_TBBindingSource, "Email", True))
-        Me.EmailTextBox.Location = New System.Drawing.Point(91, 163)
+        Me.EmailTextBox.Location = New System.Drawing.Point(89, 135)
         Me.EmailTextBox.Name = "EmailTextBox"
-        Me.EmailTextBox.Size = New System.Drawing.Size(257, 20)
+        Me.EmailTextBox.Size = New System.Drawing.Size(306, 20)
         Me.EmailTextBox.TabIndex = 8
         '
         'PhoneLabel
         '
         PhoneLabel.AutoSize = True
-        PhoneLabel.Location = New System.Drawing.Point(20, 192)
+        PhoneLabel.Location = New System.Drawing.Point(18, 164)
         PhoneLabel.Name = "PhoneLabel"
         PhoneLabel.Size = New System.Drawing.Size(41, 13)
         PhoneLabel.TabIndex = 9
@@ -275,16 +275,16 @@ Partial Class CollectorDetails
         'PhoneTextBox
         '
         Me.PhoneTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Collector_TBBindingSource, "Phone", True))
-        Me.PhoneTextBox.Location = New System.Drawing.Point(91, 189)
+        Me.PhoneTextBox.Location = New System.Drawing.Point(89, 161)
         Me.PhoneTextBox.Name = "PhoneTextBox"
-        Me.PhoneTextBox.Size = New System.Drawing.Size(257, 20)
+        Me.PhoneTextBox.Size = New System.Drawing.Size(306, 20)
         Me.PhoneTextBox.TabIndex = 10
         '
         'CollectorDetails
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(399, 261)
+        Me.ClientSize = New System.Drawing.Size(438, 250)
         Me.Controls.Add(Collector_IDLabel)
         Me.Controls.Add(Me.Collector_IDTextBox)
         Me.Controls.Add(FullNameLabel)
